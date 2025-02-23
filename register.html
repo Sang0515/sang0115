@@ -131,12 +131,16 @@
             const username = document.getElementById("username").value;
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
-            
+
+            // ตรวจสอบว่าผู้ใช้กรอกข้อมูลครบถ้วนหรือไม่
             if (username && email && password) {
+                // แสดงข้อความแจ้งเตือน
                 alert(`ลงทะเบียนสำเร็จ!\nชื่อผู้ใช้: ${username}\nอีเมล: ${email}`);
-                // เพิ่มโค้ดการบันทึกข้อมูลที่นี่ เช่น ส่งไปยังเซิร์ฟเวอร์
+                
+                // เปลี่ยนหน้าไปที่ successPage.html หลังการลงทะเบียน
+                window.location.href = "successPage.html"; // เปลี่ยน URL ไปที่หน้าใหม่
             } else {
-                alert("กรุณากรอกข้อมูลให้ครบถ้วน!");
+                alert("กรุณากรอกข้อมูลให้ครบถ้วน!"); // แจ้งเตือนถ้าข้อมูลไม่ครบ
             }
         }
 
